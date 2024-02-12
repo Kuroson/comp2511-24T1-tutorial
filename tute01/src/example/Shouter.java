@@ -14,7 +14,24 @@ package example;
  * - toString
  */
 public class Shouter {
+    private String message;
+
+    public Shouter(String message) {
+        this.message = message;
+    }
+
+    public void shout() {
+        System.out.println(this.message.toUpperCase());
+    }
+
+    public void setMessage(String newMessage) {
+        this.message = newMessage;
+    }
+
     public static void main(String[] args) {
-        // TODO
+        Shouter s = new Shouter("Initial Message");
+        s.shout();
+        s.setMessage("hello COMP2511");
+        s.shout();
     }
 }
